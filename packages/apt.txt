@@ -1,0 +1,8 @@
+git
+git-lfs
+tree
+unzip
+wget
+curl
+docker.io
+tmux
