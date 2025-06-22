@@ -5,7 +5,7 @@
 DOTFILES_DIR=$HOME/dotfiles
 PACKAGES_DIR=$DOTFILES_DIR/packages
 
-#Dertmiine Operating system
+#Dertmine Operating system
 
 case $(uname | tr '[:upper:]' '[:lower:]') in
 linux*)
@@ -22,11 +22,13 @@ darwin*)
   ;;
 esac
 
-echo PACKAGE_MANAGER + " " + HOST_OS
+echo $PACKAGE_MANAGER $HOST_OS
 
-return
+exit
 
-#TODO: paraterise and use system agnostic package manager..... like homebrew, apt or yum (TBH still think NIX would be a good default packagemanager without using NixOS)
+function lazy_vim_install ()
+
+TODO: paraterise and use system agnostic package manager..... like homebrew, apt or yum (TBH still think NIX would be a good default packagemanager without using NixOS)
 # Install updates and default apt packages
 PACKAGES=$(cat $PACKAGES_DIR/apt.txt | sort -u)
 sudo apt-get -q update && sudo apt-get -q upgrade -y
