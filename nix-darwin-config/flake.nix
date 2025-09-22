@@ -16,7 +16,6 @@
         [ 
 	  pkgs.vim
 	  pkgs.tmux
-	  pkgs.vscode
 	
         ];
 
@@ -24,8 +23,6 @@
       nix.settings.experimental-features = "nix-command flakes";
 
       security.pam.services.sudo_local.touchIdAuth = true;  
-
-      system.primaryUser = "luper";
 
       system.defaults = {
   	dock.autohide = true;
@@ -50,11 +47,6 @@
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin"; 
 
-      homebrew.enable = true;
-      homebrew.casks = [
-	"obsidian"
-      ];
-      homebrew.brews = [ ];
     };
   in
   {
